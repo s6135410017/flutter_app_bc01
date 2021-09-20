@@ -1,9 +1,10 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginUI extends StatefulWidget {
-  const LoginUI({ Key? key }) : super(key: key);
+  const LoginUI({Key? key}) : super(key: key);
 
   @override
   _LoginUIState createState() => _LoginUIState();
@@ -24,7 +25,7 @@ class _LoginUIState extends State<LoginUI> {
               Image.asset(
                 'assets/images/education.png',
                 //height: 120.0,
-                width: MediaQuery.of(context).size.width *0.4,
+                width: MediaQuery.of(context).size.width * 0.4,
               ),
               SizedBox(
                 height: 15.0,
@@ -91,7 +92,7 @@ class _LoginUIState extends State<LoginUI> {
               ),
               SizedBox(
                 height: 30.0,
-              ),  
+              ),
               Padding(
                 padding: const EdgeInsets.only(
                   left: 40.0,
@@ -125,13 +126,13 @@ class _LoginUIState extends State<LoginUI> {
                     prefixIcon: Icon(
                       Icons.person,
                       color: Color(0xFF101276),
-                    ), 
+                    ),
                   ),
                 ),
               ),
-               SizedBox(
+              SizedBox(
                 height: 30.0,
-              ),  
+              ),
               Padding(
                 padding: const EdgeInsets.only(
                   left: 40.0,
@@ -165,7 +166,7 @@ class _LoginUIState extends State<LoginUI> {
                     prefixIcon: Icon(
                       Icons.lock,
                       color: Color(0xFF101276),
-                    ), 
+                    ),
                     suffixIcon: Icon(
                       Icons.visibility_off,
                       color: Colors.grey,
@@ -173,9 +174,115 @@ class _LoginUIState extends State<LoginUI> {
                   ),
                   obscureText: true,
                 ),
-              ),            
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                  top: 10.0,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'ลงทะเบียน',
+                          style: TextStyle(
+                            fontFamily: 'Kanit',
+                            color: Color(0xFF101276),
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          alignment: Alignment.centerLeft,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          'ลืมรหัสผ่าน?',
+                          style: TextStyle(
+                            fontFamily: 'Kanit',
+                            color: Colors.red,
+                          ),
+                        ),
+                        style: TextButton.styleFrom(
+                          alignment: Alignment.centerRight,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                ),
+                child: OutlinedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'เข้าใช้งาน',
+                    style: TextStyle(
+                      fontFamily: 'Kabit',
+                      color: Color(0xFF101276),
+                    ),
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: Size(
+                      MediaQuery.of(context).size.width,
+                      50.0,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        50.0,
+                      ),
+                    ),
+                    side: BorderSide(
+                      color: Color(0xFF101276),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 40.0,
+                  right: 40.0,
+                  top: 20.0,
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 2.0,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 10.0,
+                        right: 10.0,
+                      ),
+                      child: Text(
+                        'หรือ',
+                        style: TextStyle(
+                          fontFamily: 'Kanit',
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 2.0,
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
-
           ),
         ),
       ),
